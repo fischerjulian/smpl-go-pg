@@ -7,6 +7,7 @@ WORKDIR /go/src/app
 
 COPY . .
 
+RUN go get github.com/lib/pq
 RUN go get -u github.com/kataras/iris
 
 # https://golang.org/cmd/cgo/

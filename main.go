@@ -14,10 +14,11 @@ import (
 
 func main() {
 
+	postgresUsername := os.Getenv("POSTGRES_USERNAME")
 	postgresPassword := os.Getenv("POSTGRES_PASSWORD")
-	host := os.Getenv("POSTGRES_HOST")
+	postgresHost := os.Getenv("POSTGRES_HOST")
 
-	connStr := "user=postgres dbname=postgres sslmode=disable password=" + postgresPassword + " host=" + host
+	connStr := "user=" + postgresUsername + " dbname=postgres sslmode=disable password=" + postgresPassword + " host=" + postgresHost
 	db, err := sql.Open("postgres", connStr)
 	company := ""
 	if err != nil {
