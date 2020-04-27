@@ -16,30 +16,30 @@ Assuming there is a PostgreSQL server running with a user `postgres` and an empt
 
 ## Build
 
-    docker image build -t smpl-go-pg:0.1.0 .
+    docker image build -t smpl-go-pg:0.2.0 .
 
 ## Tag
 
-    docker image tag smpl-go-pg:0.1.0 fischerjulian/smpl-go-pg:0.1.0
+    docker image tag smpl-go-pg:0.2.0 fischerjulian/smpl-go-pg:0.2.0
 
 ## Publish to Registry
 
-    docker image push fischerjulian/smpl-go-pg:1.0.0                                   
+    docker image push fischerjulian/smpl-go-pg:0.2.0                                   
 
 ## Pull Image from Registry
 
-    docker image pull fischerjulian/smpl-go-pg:0.1.0
+    docker image pull fischerjulian/smpl-go-pg:0.2.0
 
 ## Run
 In order to run the image you will also have to set the env vars `POSTGRES_HOST` and `POSTGRES_PASSWORD` which is not contained in the examples below as the images will be used in the context of Kubernetes, only.
 
-Run local image with version tag `0.1.0`:
+Run local image with version tag `0.2.0`:
 
-    docker container run -p 8080:8080 smpl-go-pg:0.1.0
+    docker container run -p 8080:8080 smpl-go-pg:0.2.0
 
-Run remote image with version tag `0.1.0`:
+Run remote image with version tag `0.2.0`:
 
-    docker container run -p  8080:8080 fischerjulian/smpl-go-pg:0.1.0
+    docker container run -p  8080:8080 fischerjulian/smpl-go-pg:0.2.0
 
 
 ## Links
